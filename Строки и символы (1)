@@ -1,0 +1,5 @@
+string = str(input ())
+n = string.lower().count('g')
+m = string.lower().count('c')
+print (((n+m)/len(string))*100)
+

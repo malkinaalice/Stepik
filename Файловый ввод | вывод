@@ -1,0 +1,21 @@
+
+inf = open ('dataset_3.txt')
+temp = inf.read().split() # [делаем список из элементов inf]
+x = [i.lower() for i in temp] # элементы к нижнему регистру
+
+d = {i: x.count(i) for i in x} # количество вхождений для каждого элемента
+
+ouf = open ('output.txt', 'w')
+
+max_value = max(d.values())
+for k in sorted(d.keys()): # если таких слов несколько, вывести лексикографически первое
+  if d[k] == max_value:
+
+    ouf.write(k) # список элементов inf в нижнем регистре 
+    ouf.write(' ')
+    ouf.write(str(d[k]))
+    ouf.close()
+    break
+inf.close()
+
+  

@@ -1,0 +1,5 @@
+s = str(input())
+x = [i.lower() for i in s.split()] 
+d = {i: x.count(i) for i in x} 
+for key, value in d.items():
+  print (key,value,end = '\n')

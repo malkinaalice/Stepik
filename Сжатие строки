@@ -1,0 +1,11 @@
+s = str(input())
+count = 1
+out = s[0]
+for i in s[1:]:
+  if out[-1] == i:
+    count += 1
+  else:
+    out += str(count) + i
+    count = 1
+out += str(count)
+print(out) 
